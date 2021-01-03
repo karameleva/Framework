@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke" verbose="1" >
+    <test name="FrameworkTest"   >
+        <classes>
+            <class name="framework.test.FrameworkTest" />
+        </classes>
+    </test>
+</suite>
