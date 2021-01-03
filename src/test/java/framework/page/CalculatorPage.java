@@ -130,8 +130,8 @@ public class CalculatorPage extends AbstractPage {
 
     public void sendEmail(String tenMinEmail){
         goToFrame();
-        emailEstimate.click();
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",email);
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();",emailEstimate);
+        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",waitForPresenceOfElement(email));
         waitForPresenceOfElement(email).sendKeys(tenMinEmail);
         ((JavascriptExecutor)driver).executeScript("arguments[0].click();",sendEmail);
         logger.info("Sent email");
