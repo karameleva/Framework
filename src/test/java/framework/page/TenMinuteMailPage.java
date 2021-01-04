@@ -11,6 +11,8 @@ import java.time.Duration;
 
 public class TenMinuteMailPage extends AbstractPage {
 
+    private static final String TEN_MIN_EMAIL_URL = "https://10minutemail.com/";
+
     @FindBy(id="mail_address")
     private WebElement mailAddress;
 
@@ -25,7 +27,7 @@ public class TenMinuteMailPage extends AbstractPage {
     }
 
     public String getTenMinMail(){
-        driver.get("https://10minutemail.com/");
+        driver.get(TEN_MIN_EMAIL_URL);
         logger.info("Open 10 min mail page ");
         waitForPresenceOfElement(mailAddress);
         String newEmail;

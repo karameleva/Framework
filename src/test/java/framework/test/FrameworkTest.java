@@ -21,7 +21,7 @@ public class FrameworkTest extends CommonConditions{
         CalculatorPage calculatorPage = new GoogleCloudPage(driver)
                 .openPage()
                 .makeSearchRequest()
-                .selectRequiredPageInSearchResults()
+                .openCalculatorPage()
                 .activateComputeEngineSection()
                 .fillInTheForm(testComputeEngine);
 
